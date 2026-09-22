@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Foods - Online Ordering</title>
+    <link rel="stylesheet" href="style .css">
+    <!--same rules applies for your script tag-->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>RK Foods</h1>
+            <p class="owner">Owned by Rajan</p>
+        </div>
+        <div class="cart-icon">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Menu Section -->
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Food Card 1 -->
+                <div class="food-card">
+                    <div class="food-info">
+                        <h3>Premium Burger</h3>
+                        <p class="price">₹149</p>
+                        <button onclick="addToCart('Premium Burger', 149)">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Food Card 2 -->
+                <div class="food-card">
+                    <div class="food-info">
+                        <h3>Cheese Paneer Pizza</h3>
+                        <p class="price">₹299</p>
+                        <button onclick="addToCart('Cheese Paneer Pizza', 299)">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Food Card 3 -->
+                <div class="food-card">
+                    <div class="food-info">
+                        <h3>Loaded Nachos</h3>
+                        <p class="price">₹119</p>
+                        <button onclick="addToCart('Loaded Nachos', 119)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar Cart Section -->
+        <aside class="cart-section">
+            <h2>Your Order</h2>
+            <div id="cart-items">
+                <p class="empty-message">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cart-total-price">0</span></h3>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Place Order</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
